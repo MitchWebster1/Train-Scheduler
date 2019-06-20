@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css"
+  </head>
+  <body>
+    <main id="container" class="container">
+      <table id="table" class="table">
+        <caption>
+          Current Train Schedule
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Train Name</td>
+            <td>Destination</td>
+            <td>Frequency (min)</td>
+            <td>Next Arrival</td>
+            <td>Minutes Away</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="http://cdn.date-fns.org/v1.30.1./date_fns.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/index.js"></script>
+  </body>
+</html>
