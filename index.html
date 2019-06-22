@@ -9,6 +9,17 @@
   </head>
   <body>
     <main id="container" class="container">
+      <form id="form" class="form">
+        <label for="name">Train Name</label>
+        <input type="text" id="name" value="" required />
+        <label for="Destination">Destination</label>
+        <input type="text" id="destination" value="" required />
+        <label for="firstTrainTime">First Train Time (HH:mm)</label>
+        <input type="text" id="trainTime" value="" required />
+        <label for="frequency">Frequency (min)</label>
+        <input type="text" id="frequency" value="" required />
+        <button type="submit" id="submitBtn" class="submitBtn">Submit</button>
+      </form>
       <table id="table" class="table">
         <caption>
           Current Train Schedule
@@ -22,19 +33,12 @@
             <th scope="col">Minutes Away</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Train Name</td>
-            <td>Destination</td>
-            <td>Frequency (min)</td>
-            <td>Next Arrival</td>
-            <td>Minutes Away</td>
-          </tr>
-        </tbody>
+        <tbody id="tbody"></tbody>
       </table>
     </main>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="http://cdn.date-fns.org/v1.30.1./date_fns.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script type="text/javascript" src="assets/javascript/index.js"></script>
   </body>
 </html>
