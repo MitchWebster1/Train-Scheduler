@@ -5,38 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Train Scheduler</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="assets/style/style.css"
   </head>
   <body>
-    <main id="container" class="container">
-      <form id="form" class="form">
-        <label for="name">Train Name</label>
-        <input type="text" id="name" value="" required />
-        <label for="Destination">Destination</label>
-        <input type="text" id="destination" value="" required />
-        <label for="firstTrainTime">First Train Time (HH:mm)</label>
-        <input type="text" id="trainTime" value="" required />
-        <label for="frequency">Frequency (min)</label>
-        <input type="text" id="frequency" value="" required />
-        <button type="submit" id="submitBtn" class="submitBtn">Submit</button>
-      </form>
-      <table id="table" class="table">
-        <caption>
-          Current Train Schedule
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Train Name</th>
-            <th scope="col">Destination</th>
-            <th scope="col">Frequency (min)</th>
-            <th scope="col">Next Arrival</th>
-            <th scope="col">Minutes Away</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
+    <header>Grab Your Caboose It's Train Time!</header>
+    <main id="container" class="container ctnr">
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <form id="form" class="form p-2">
+            <label for="form"><h3>Add a Train</h3></label>
+
+            <div class="form-group">
+              <label for="name"><h4>Train Name:</h4></label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Destination"><h4>Destination:</h4></label>
+              <input
+                type="text"
+                id="destination"
+                class="form-control"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="firstTrainTime"
+                ><h4>First Train Time (HH:mm)</h4></label
+              >
+              <input
+                pattern="(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9])"
+                id="trainTime"
+                class="form-control"
+                value=""
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="frequency"><h4>Frequency (min)</h4></label>
+              <input
+                type="number"
+                id="frequency"
+                class="form-control"
+                value=""
+                required
+              />
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-outline-dark">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="tbl col-md-9 col-sm-12">
+          <span class="tblheader"><h3>Current Train Schedule</h3></span>
+          <table id="table" class="table table-hover">
+            <thead class="thead">
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody id="tbody" class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script type="text/javascript" src="assets/javascript/index.js"></script>

@@ -1,3 +1,25 @@
-.table {
-  width: 100%;
+body {
+  background: url('../images/train.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  font-size: 4rem;
+  margin: 1rem;
+  color: #b70000;
+}
+
+.form {
+  border-radius: 5px;
+  background: #ffffff90;
+}
+
+.tbl {
+  border-radius: 5px;
+  background: #ffffff90;
+}
+
+.tblheader {
+  text-align: center;
 }
