@@ -23,3 +23,7 @@ header {
 .tblheader {
   text-align: center;
 }
+
+td {
+  font-weight: 550;
+}
